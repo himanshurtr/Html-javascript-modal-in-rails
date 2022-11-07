@@ -1,0 +1,8 @@
+<tr id="<%= book_app.id %>">
+  <td style="text-align:center"><%= book_app.title %></td>
+  <td style="text-align:center"><%= book_app.price %></td>
+  <td style="text-align:center"><%= link_to 'Show', book_app, remote: true, class:"btn btn-info"%></td>
+  <td style="text-align:center"><%= link_to 'Edit', edit_book_app_path(book_app), remote: true, class:"btn btn-warning
+    " %></td>
+  <td style="text-align:center"><%= link_to 'Destroy', book_app, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class:"btn btn-dark" %></td>
+</tr>

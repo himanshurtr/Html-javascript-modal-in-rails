@@ -1,0 +1,7 @@
+<% if @book_app.errors.any? %>
+  $('#error').html("<%= j render 'error', book_app: @book_app %>")
+
+<% else %>
+  $('#book-content').modal('hide');
+  $("#<%= @book_app.id %>").replaceWith("<%= j render 'book', book_app: @book_app %>");
+<% end %>

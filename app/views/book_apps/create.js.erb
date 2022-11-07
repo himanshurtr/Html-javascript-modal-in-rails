@@ -1,0 +1,7 @@
+<% if @book_app.errors.any? %>
+  $('#error').html("<%= j render 'error', book_app: @book_app %>")
+
+<% else %>
+  $('.bookTab').append("<%= j render 'book', book_app: @book_app, model_title: 'create new book'%>");
+  $('#book-content').modal('hide');
+<% end %>  
